@@ -40,7 +40,16 @@ acceptQuest(){
     makeRequest "groups/party/quests/accept" "POST"
 }
 
+
+cronTrigger(){
+    makeRequest "cron" "POST"
+}
+
 if [ "$1" == 'quest' ]
 then
     checkQuest
+elif  [ "$1" == 'cron' ]
+then
+    cronTrigger
 fi
+
