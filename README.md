@@ -7,3 +7,6 @@ requires export of two vars:
 
 crontab executes on the hour for my machine, but you can schedule as required for auto acceptance of party quests:
 ./habitica_utilities.sh quest
+
+or to trigger cron action after your end of day
+./habitica_utilities.sh cron
