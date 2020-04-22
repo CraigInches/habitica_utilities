@@ -7,8 +7,8 @@ makeRequest() {
     then
         curl "${baseUrl}/${1}" -s -X GET --compressed \
             -H "Content-Type: application/json" \
-            -H "x-api-user: ${HABBIT_ID}" \
-            -H "x-api-key: ${HABBIT_KEY}" \
+            -H "x-api-user: ${HABIT_ID}" \
+            -H "x-api-key: ${HABIT_KEY}" \
             -H "x-client: ${authorID}"
     fi
     if [ "$2" == "POST" ] && [ -z "$3" ]
@@ -16,8 +16,8 @@ makeRequest() {
         curl "${baseUrl}/${1}" -s -X POST \
             -H "Content-length: 0" \
             -H "Content-Type: application/json" \
-            -H "x-api-user: ${HABBIT_ID}" \
-            -H "x-api-key: ${HABBIT_KEY}" \
+            -H "x-api-user: ${HABIT_ID}" \
+            -H "x-api-key: ${HABIT_KEY}" \
             -H "x-client: ${authorID}"
     fi
 
